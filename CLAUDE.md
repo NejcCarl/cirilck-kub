@@ -4,7 +4,8 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-Omakub is an opinionated Ubuntu 24.04+ setup system that transforms a fresh installation into a fully-configured web development environment. It's a bash-based installer that automates the setup of terminal tools, desktop applications, themes, and development environments.
+Omakub is an opinionated Ubuntu 24.04+ setup system that transforms a fresh installation into a fully-configured web development environment.
+It's a bash-based installer that automates the setup of terminal tools, desktop applications, themes, and development environments.
 
 ## Architecture
 
