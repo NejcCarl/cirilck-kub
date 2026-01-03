@@ -1,9 +1,9 @@
 #!/bin/bash
 
-cp ~/.local/share/omakub/configs/alacritty/shared.toml ~/.config/alacritty/shared.toml
-cp ~/.local/share/omakub/configs/alacritty/pane.toml ~/.config/alacritty/pane.toml
-cp ~/.local/share/omakub/configs/alacritty/btop.toml ~/.config/alacritty/btop.toml
-cp ~/.local/share/omakub/configs/alacritty.toml ~/.config/alacritty/alacritty.toml
+cp ~/.local/share/cirilck-kub/configs/alacritty/shared.toml ~/.config/alacritty/shared.toml
+cp ~/.local/share/cirilck-kub/configs/alacritty/pane.toml ~/.config/alacritty/pane.toml
+cp ~/.local/share/cirilck-kub/configs/alacritty/btop.toml ~/.config/alacritty/btop.toml
+cp ~/.local/share/cirilck-kub/configs/alacritty.toml ~/.config/alacritty/alacritty.toml
 
 source $OMAKUB_PATH/applications/About.sh
 source $OMAKUB_PATH/applications/Activity.sh

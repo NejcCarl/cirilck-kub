@@ -45,4 +45,4 @@ git clone https://github.com/NejcCarl/cirilck-kub.git  ~/.local/share/cirilck-ku
 #fi
 
 echo "Installation starting..."
-source ~/.local/share/omakub/install.sh
+source ~/.local/share/cirilck-kub/install.sh

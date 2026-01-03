@@ -13,7 +13,7 @@ It's a bash-based installer that automates the setup of terminal tools, desktop 
 
 The installation follows a multi-stage pipeline:
 
-1. **boot.sh** - Entry point that clones the repository to `~/.local/share/omakub` and kicks off the installation
+1. **boot.sh** - Entry point that clones the repository to `~/.local/share/cirilck-kub` and kicks off the installation
 2. **install.sh** - Main orchestrator that:
    - Checks Ubuntu version compatibility (install/check-version.sh)
    - Prompts for user choices via `gum` (install/first-run-choices.sh)
@@ -36,7 +36,7 @@ The installation follows a multi-stage pipeline:
 
 **Modular Installers**: Each installer script is self-contained and can be sourced independently. Desktop and terminal installers are run via loops:
 ```bash
-for installer in ~/.local/share/omakub/install/terminal/*.sh; do source $installer; done
+for installer in ~/.local/share/cirilck-kub/install/terminal/*.sh; do source $installer; done
 ```
 
 **User Choices**: The system uses `gum` for interactive prompts. Choices are stored in environment variables (e.g., `OMAKUB_FIRST_RUN_LANGUAGES`, `OMAKUB_FIRST_RUN_DBS`) and can be automated by pre-setting these variables.
@@ -102,5 +102,5 @@ When updating Omakub itself, create timestamped migration scripts in migrations/
 - **Target OS**: Ubuntu 24.04+ only. The install/check-version.sh enforces this.
 - **GNOME Detection**: Desktop features only install when `XDG_CURRENT_DESKTOP` contains "GNOME"
 - **Error Handling**: Main install.sh uses `set -e` and traps ERR to provide retry instructions
-- **User Paths**: Everything installs to user directories (`~/.local/share/omakub`, `~/.config/`, etc.) to avoid requiring excessive sudo
+- **User Paths**: Everything installs to user directories (`~/.local/share/cirilck-kub`, `~/.config/`, etc.) to avoid requiring excessive sudo
 - **Aliases**: Common aliases are defined in defaults/bash/aliases (e.g., `ls` → `eza`, `cd` → `z`, `n` → `nvim`, `lzg` → `lazygit`)
