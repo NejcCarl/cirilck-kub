@@ -7,6 +7,6 @@ https://askubuntu.com/questions/1311408/vlc-crashes-on-startup-qt-session-manage
 
 =====================================================================================================================
 EOF
-sudo snap install -y vlc
+sudo snap install vlc
 
 #sudo apt install -y vlc
