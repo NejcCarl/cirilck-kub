@@ -1,5 +1,5 @@
 #!/bin/bash
-
+# TODO now take a look at defaults in configs/.bashrc and add them to your .bashrc
 # Configure the bash shell using Omakub defaults
 [ -f ~/.bashrc ] && mv ~/.bashrc ~/.bashrc.bak
 cp ~/.local/share/cirilck-kub/configs/bashrc ~/.bashrc
