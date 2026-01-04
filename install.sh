@@ -37,3 +37,5 @@ else
   echo "Only installing terminal tools..."
   source ~/.local/share/cirilck-kub/install/terminal.sh
 fi
+
+bat  ~/.local/share/cirilck-kub/manual_instructions.md
