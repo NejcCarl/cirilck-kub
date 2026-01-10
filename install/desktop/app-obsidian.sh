@@ -8,4 +8,4 @@
 #rm obsidian.deb
 #cd -
 
-sudo snap install -y obsidian --classic
+sudo snap install obsidian --classic
