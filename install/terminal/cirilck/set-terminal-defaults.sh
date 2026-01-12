@@ -33,9 +33,6 @@ SCROLL_ON_KEYSTROKE=true
 # Bell settings
 AUDIBLE_BELL=false
 
-# Text selection
-COPY_ON_SELECT=true
-
 # Window settings
 SHOW_MENUBAR=false
 THEME_VARIANT="dark"        # Options: dark, light, system
@@ -87,9 +84,13 @@ gsettings set $PROFILE_PATH scroll-on-keystroke $SCROLL_ON_KEYSTROKE
 echo "- Setting bell options..."
 gsettings set $PROFILE_PATH audible-bell $AUDIBLE_BELL
 
-# Text selection
-echo "- Setting text selection..."
-gsettings set $PROFILE_PATH copy-on-select $COPY_ON_SELECT
+# Try to set copy-on-select (only works on newer versions)
+echo "- Attempting to set copy-on-select (requires GNOME Terminal 3.38+)..."
+if gsettings set $PROFILE_PATH copy-on-select true 2>/dev/null; then
+    echo "  ✓ Copy-on-select enabled"
+else
+    echo "  ✗ Copy-on-select not supported (requires newer GNOME Terminal version)"
+fi
 
 # Global terminal settings
 echo "- Setting global terminal options..."
@@ -107,6 +108,6 @@ echo "- Colors: $FOREGROUND_COLOR on $BACKGROUND_COLOR"
 echo "- Terminal size: ${TERMINAL_COLUMNS}x${TERMINAL_ROWS}"
 echo "- Transparency: $TRANSPARENCY_PERCENT%"
 echo "- Scrollback: $SCROLLBACK_LINES lines"
-echo "- Copy on select: $COPY_ON_SELECT"
 echo ""
+echo "Note: Copy-on-select feature requires GNOME Terminal 3.38+"
 echo "You may need to restart the terminal or open a new tab to see all changes."
