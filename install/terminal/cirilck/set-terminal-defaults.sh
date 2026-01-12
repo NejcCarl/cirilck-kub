@@ -32,10 +32,9 @@ SCROLL_ON_KEYSTROKE=true
 
 # Bell settings
 AUDIBLE_BELL=false
-VISIBLE_BELL=true
 
 # Text selection
-COPY_SELECTION=true
+COPY_ON_SELECT=true
 
 # Window settings
 SHOW_MENUBAR=false
@@ -87,11 +86,10 @@ gsettings set $PROFILE_PATH scroll-on-keystroke $SCROLL_ON_KEYSTROKE
 # Bell settings
 echo "- Setting bell options..."
 gsettings set $PROFILE_PATH audible-bell $AUDIBLE_BELL
-gsettings set $PROFILE_PATH visible-bell $VISIBLE_BELL
 
 # Text selection
 echo "- Setting text selection..."
-gsettings set $PROFILE_PATH copy-selection $COPY_SELECTION
+gsettings set $PROFILE_PATH copy-on-select $COPY_ON_SELECT
 
 # Global terminal settings
 echo "- Setting global terminal options..."
@@ -109,5 +107,6 @@ echo "- Colors: $FOREGROUND_COLOR on $BACKGROUND_COLOR"
 echo "- Terminal size: ${TERMINAL_COLUMNS}x${TERMINAL_ROWS}"
 echo "- Transparency: $TRANSPARENCY_PERCENT%"
 echo "- Scrollback: $SCROLLBACK_LINES lines"
+echo "- Copy on select: $COPY_ON_SELECT"
 echo ""
 echo "You may need to restart the terminal or open a new tab to see all changes."
