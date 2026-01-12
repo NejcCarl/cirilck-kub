@@ -38,3 +38,6 @@ Go to your system settings -> Notifications and disable Snapd User Session Agent
 dodaj v .emacs file
 (set-face-attribute 'default nil :height 200)
 https://orgmode.org/manual/Activation.html#Activation
+
+* conf nautilus
+  https://askubuntu.com/questions/294901/how-to-disable-recent-files-folder-in-nautilus
