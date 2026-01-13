@@ -66,7 +66,7 @@ gsettings set org.gnome.settings-daemon.plugins.media-keys custom-keybindings "[
 
 # Set ulauncher to Super+Space
 # switch input source changed to not conflict with ulauncher
-gsettings set org.gnome.desktop.wm.keybindings switch-input-source "<Super>i"
+gsettings set org.gnome.desktop.wm.keybindings switch-input-source "['<Super>i']"
 gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/ name 'Ulauncher'
 gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/ command 'sh -c "pgrep -x ulauncher && { ulauncher-toggle || true; } || setsid -f ulauncher"'
 gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/ binding '<Super>space'
