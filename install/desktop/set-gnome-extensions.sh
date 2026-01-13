@@ -13,12 +13,26 @@ gnome-extensions disable ding@rastersoft.com
 gum confirm "To install Gnome extensions, you need to accept some confirmations. Ready?"
 
 # Install new extensions
+
+# Tactile: Grid-based window tiling with keyboard shortcuts
 gext install tactile@lundal.io
+
+# Just Perfection: Tweak GNOME Shell UI elements (animations, panel, dash visibility)
 gext install just-perfection-desktop@just-perfection
+
+# Blur My Shell: Add blur effects to overview, dash, and other shell components
 gext install blur-my-shell@aunetx
+
+# Space Bar: Workspace indicator in the top panel with workspace names
 gext install space-bar@luchrioh
+
+# Undecorate: Remove window decorations (title bars) from maximized windows
 gext install undecorate@sun.wxg@gmail.com
+
+# TopHat: System monitor showing CPU, memory, network, and disk usage in the top panel
 gext install tophat@fflewddur.github.io
+
+# Alphabetical App Grid: Sort applications in the app grid alphabetically
 gext install AlphabeticalAppGrid@stuarthayhurst
 
 # Compile gsettings schemas in order to be able to set them
