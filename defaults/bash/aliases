@@ -1,6 +1,6 @@
 # File system
-alias ls='eza -lh --group-directories-first --icons=auto'
-alias lsa='ls -a'
+alias l='eza -lh --group-directories-first --icons=auto'
+alias la='ls -a'
 alias lt='eza --tree --level=2 --long --icons --git'
 alias lta='lt -a'
 alias ff="fzf --preview 'batcat --style=numbers --color=always {}'"
@@ -13,15 +13,44 @@ alias ...='cd ../..'
 alias ....='cd ../../..'
 
 # Tools
-n() { if [ "$#" -eq 0 ]; then nvim .; else nvim "$@"; fi; }
-alias g='git'
-alias d='docker'
-alias r='rails'
 alias bat='batcat'
-alias lzg='lazygit'
-alias lzd='lazydocker'
 
 # Git
 alias gcm='git commit -m'
 alias gcam='git commit -a -m'
 alias gcad='git commit -a --amend'
+
+alias gtd='cd /home/nejc/h/Mega/org'
+alias gtd2='cd /home/nejc/h/Dropbox/org'
+alias gg='(/home/nejc/h/programi/standard-notes-3.194.0-linux-x86_64.AppImage --no-sandbox)&'
+alias e='emacs -nw'
+alias s='echo "$(uptime -s)" "$(date "+%H:%M:%S")"  | cat >>/home/nejc/.shutdownLogs/logs;echo ""; shutdown -h'
+alias c="convertToMp3"
+alias u="docker-compose up --build"
+alias rm="trash"
+
+# projekti
+alias g='/home/nejc/h/Mega/org/decIder.py'
+alias ge='/home/nejc/h/Mega/org/decIder_extended.py'
+
+# todo now lbrt delete after GetJustice
+alias lbrt="cd /home/nejc/h/1programiranje/bash/lbrt_linux/conf"
+alias lbrtc="cat /home/nejc/h/1programiranje/bash/lbrt_linux/conf/work_log"
+alias dt="date -d '9:00:00 today' +%s"
+alias ds="date -d '9:00:00 today'"
+
+# direktoriji
+alias m="cd /home/nejc/h/Mega"
+alias mo="cd /home/nejc/h/Mega/org"
+alias i="cd /home/nejc/h/1programiranje/igrisce"
+# todo now add to g or ge
+alias navodila='nautilus /home/nejc/h/Mega/navodila'
+alias hrana='nautilus /home/nejc/h/Mega/navodila/hrana'
+
+# eog
+alias wi="(eog -s /home/nejc/Pictures/slike/novo&); exit"
+alias na="(eog -s /home/nejc/Pictures/nature&); exit"
+
+# todo now invert colors
+#sleep 0.10
+#xdotool key "Super_L+i"
