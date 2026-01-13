@@ -45,7 +45,7 @@ sudo cp ~/.local/share/gnome-shell/extensions/blur-my-shell\@aunetx/schemas/org.
 sudo cp ~/.local/share/gnome-shell/extensions/space-bar\@luchrioh/schemas/org.gnome.shell.extensions.space-bar.gschema.xml /usr/share/glib-2.0/schemas/
 sudo cp ~/.local/share/gnome-shell/extensions/tophat@fflewddur.github.io/schemas/org.gnome.shell.extensions.tophat.gschema.xml /usr/share/glib-2.0/schemas/
 sudo cp ~/.local/share/gnome-shell/extensions/AlphabeticalAppGrid\@stuarthayhurst/schemas/org.gnome.shell.extensions.AlphabeticalAppGrid.gschema.xml /usr/share/glib-2.0/schemas/
-sudo cp ~/.local/share/gnome-shell/extensions/wsmatrix\@martin.zurowietz.org/schemas/org.gnome.shell.extensions.wsmatrix.gschema.xml /usr/share/glib-2.0/schemas/
+sudo cp ~/.local/share/gnome-shell/extensions/wsmatrix\@martin.zurowietz.de/schemas/org.gnome.shell.extensions.wsmatrix.gschema.xml /usr/share/glib-2.0/schemas/
 sudo glib-compile-schemas /usr/share/glib-2.0/schemas/
 
 # Configure Tactile
@@ -95,5 +95,5 @@ gsettings set org.gnome.shell.extensions.tophat network-usage-unit bits
 gsettings set org.gnome.shell.extensions.alphabetical-app-grid folder-order-position 'end'
 
 # Configure Workspace Matrix
-gsettings set org.gnome.shell.extensions.wsmatrix num-columns 6
-gsettings set org.gnome.shell.extensions.wsmatrix num-rows 5
+gsettings set org.gnome.shell.extensions.wsmatrix-settings num-columns 6
+gsettings set org.gnome.shell.extensions.wsmatrix-settings num-rows 5
