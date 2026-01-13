@@ -60,6 +60,7 @@ gsettings set org.gnome.settings-daemon.plugins.media-keys next "['<Shift>AudioP
 gsettings set org.gnome.settings-daemon.plugins.media-keys volume-up "['<Ctrl><Alt>KP_8']"
 gsettings set org.gnome.settings-daemon.plugins.media-keys volume-mute "['<Ctrl><Alt>KP_5']"
 gsettings set org.gnome.settings-daemon.plugins.media-keys volume-down "['<Ctrl><Alt>KP_2']"
+gsettings set org.gnome.settings-daemon.plugins.media-keys volume-step 5
 
 # Reserve slots for custom keybindings
 gsettings set org.gnome.settings-daemon.plugins.media-keys custom-keybindings "['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom3/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom4/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom5/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom6/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom7/']"
