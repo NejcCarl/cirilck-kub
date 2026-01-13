@@ -35,6 +35,9 @@ gext install tophat@fflewddur.github.io
 # Alphabetical App Grid: Sort applications in the app grid alphabetically
 gext install AlphabeticalAppGrid@stuarthayhurst
 
+# Workspace Matrix: Arrange workspaces in a grid layout instead of linear
+gext install wsmatrix@martin.zurowietz.de
+
 # Compile gsettings schemas in order to be able to set them
 sudo cp ~/.local/share/gnome-shell/extensions/tactile@lundal.io/schemas/org.gnome.shell.extensions.tactile.gschema.xml /usr/share/glib-2.0/schemas/
 sudo cp ~/.local/share/gnome-shell/extensions/just-perfection-desktop\@just-perfection/schemas/org.gnome.shell.extensions.just-perfection.gschema.xml /usr/share/glib-2.0/schemas/
@@ -42,6 +45,7 @@ sudo cp ~/.local/share/gnome-shell/extensions/blur-my-shell\@aunetx/schemas/org.
 sudo cp ~/.local/share/gnome-shell/extensions/space-bar\@luchrioh/schemas/org.gnome.shell.extensions.space-bar.gschema.xml /usr/share/glib-2.0/schemas/
 sudo cp ~/.local/share/gnome-shell/extensions/tophat@fflewddur.github.io/schemas/org.gnome.shell.extensions.tophat.gschema.xml /usr/share/glib-2.0/schemas/
 sudo cp ~/.local/share/gnome-shell/extensions/AlphabeticalAppGrid\@stuarthayhurst/schemas/org.gnome.shell.extensions.AlphabeticalAppGrid.gschema.xml /usr/share/glib-2.0/schemas/
+sudo cp ~/.local/share/gnome-shell/extensions/wsmatrix\@martin.zurowietz.org/schemas/org.gnome.shell.extensions.wsmatrix.gschema.xml /usr/share/glib-2.0/schemas/
 sudo glib-compile-schemas /usr/share/glib-2.0/schemas/
 
 # Configure Tactile
@@ -89,3 +93,7 @@ gsettings set org.gnome.shell.extensions.tophat network-usage-unit bits
 
 # Configure AlphabeticalAppGrid
 gsettings set org.gnome.shell.extensions.alphabetical-app-grid folder-order-position 'end'
+
+# Configure Workspace Matrix
+gsettings set org.gnome.shell.extensions.wsmatrix num-columns 6
+gsettings set org.gnome.shell.extensions.wsmatrix num-rows 5
