@@ -23,9 +23,6 @@ gext install just-perfection-desktop@just-perfection
 # Blur My Shell: Add blur effects to overview, dash, and other shell components
 gext install blur-my-shell@aunetx
 
-# Space Bar: Workspace indicator in the top panel with workspace names
-gext install space-bar@luchrioh
-
 # Undecorate: Remove window decorations (title bars) from maximized windows
 gext install undecorate@sun.wxg@gmail.com
 
@@ -42,7 +39,6 @@ gext install wsmatrix@martin.zurowietz.de
 sudo cp ~/.local/share/gnome-shell/extensions/tactile@lundal.io/schemas/org.gnome.shell.extensions.tactile.gschema.xml /usr/share/glib-2.0/schemas/
 sudo cp ~/.local/share/gnome-shell/extensions/just-perfection-desktop\@just-perfection/schemas/org.gnome.shell.extensions.just-perfection.gschema.xml /usr/share/glib-2.0/schemas/
 sudo cp ~/.local/share/gnome-shell/extensions/blur-my-shell\@aunetx/schemas/org.gnome.shell.extensions.blur-my-shell.gschema.xml /usr/share/glib-2.0/schemas/
-sudo cp ~/.local/share/gnome-shell/extensions/space-bar\@luchrioh/schemas/org.gnome.shell.extensions.space-bar.gschema.xml /usr/share/glib-2.0/schemas/
 sudo cp ~/.local/share/gnome-shell/extensions/tophat@fflewddur.github.io/schemas/org.gnome.shell.extensions.tophat.gschema.xml /usr/share/glib-2.0/schemas/
 sudo cp ~/.local/share/gnome-shell/extensions/AlphabeticalAppGrid\@stuarthayhurst/schemas/org.gnome.shell.extensions.AlphabeticalAppGrid.gschema.xml /usr/share/glib-2.0/schemas/
 sudo cp ~/.local/share/gnome-shell/extensions/wsmatrix\@martin.zurowietz.de/schemas/org.gnome.shell.extensions.wsmatrix.gschema.xml /usr/share/glib-2.0/schemas/
@@ -60,8 +56,11 @@ gsettings set org.gnome.shell.extensions.tactile gap-size 32
 # Configure Just Perfection
 gsettings set org.gnome.shell.extensions.just-perfection animation 2
 gsettings set org.gnome.shell.extensions.just-perfection dash-app-running true
-gsettings set org.gnome.shell.extensions.just-perfection workspace true
 gsettings set org.gnome.shell.extensions.just-perfection workspace-popup false
+# todo now should I remove this?
+#gsettings set org.gnome.shell.extensions.just-perfection workspace false
+#gsettings set org.gnome.shell.extensions.just-perfection workspace-switcher-should-show false
+gsettings set org.gnome.shell.extensions.just-perfection activities-button false
 
 # Configure Blur My Shell
 gsettings set org.gnome.shell.extensions.blur-my-shell.appfolder blur false
@@ -76,12 +75,6 @@ gsettings set org.gnome.shell.extensions.blur-my-shell.dash-to-dock brightness 0
 gsettings set org.gnome.shell.extensions.blur-my-shell.dash-to-dock sigma 30
 gsettings set org.gnome.shell.extensions.blur-my-shell.dash-to-dock static-blur true
 gsettings set org.gnome.shell.extensions.blur-my-shell.dash-to-dock style-dash-to-dock 0
-
-# Configure Space Bar
-gsettings set org.gnome.shell.extensions.space-bar.behavior smart-workspace-names false
-gsettings set org.gnome.shell.extensions.space-bar.shortcuts enable-activate-workspace-shortcuts false
-gsettings set org.gnome.shell.extensions.space-bar.shortcuts enable-move-to-workspace-shortcuts true
-gsettings set org.gnome.shell.extensions.space-bar.shortcuts open-menu "@as []"
 
 # Configure TopHat
 gsettings set org.gnome.shell.extensions.tophat show-icons false
