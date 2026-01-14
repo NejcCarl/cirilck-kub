@@ -22,7 +22,7 @@ alias gcad='git commit -a --amend'
 
 alias gtd='cd /home/nejc/h/Mega/org'
 alias gtd2='cd /home/nejc/h/Dropbox/org'
-alias gg='(/home/nejc/h/programi/standard-notes-3.194.0-linux-x86_64.AppImage --no-sandbox)&'
+alias gg='(/home/nejc/h/programi/standard-notes-3.198.5-linux-x86_64.AppImage --no-sandbox)&'
 alias e='emacs -nw'
 alias s='echo "$(uptime -s)" "$(date "+%H:%M:%S")"  | cat >>/home/nejc/.shutdownLogs/logs;echo ""; shutdown -h'
 alias c="convertToMp3"
