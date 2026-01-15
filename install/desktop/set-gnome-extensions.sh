@@ -35,6 +35,10 @@ gext install AlphabeticalAppGrid@stuarthayhurst
 # Workspace Matrix: Arrange workspaces in a grid layout instead of linear
 gext install wsmatrix@martin.zurowietz.de
 
+# todo now - at next installation check if it works with <Super> + i
+# Invert Window Color: Invert colors of individual windows with a keyboard shortcut
+gext install invert-window@maiself
+
 # Compile gsettings schemas in order to be able to set them
 sudo cp ~/.local/share/gnome-shell/extensions/tactile@lundal.io/schemas/org.gnome.shell.extensions.tactile.gschema.xml /usr/share/glib-2.0/schemas/
 sudo cp ~/.local/share/gnome-shell/extensions/just-perfection-desktop\@just-perfection/schemas/org.gnome.shell.extensions.just-perfection.gschema.xml /usr/share/glib-2.0/schemas/
