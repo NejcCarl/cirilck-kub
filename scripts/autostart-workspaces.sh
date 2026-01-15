@@ -13,6 +13,7 @@ webstorm &
 sleep 3
 wmctrl -x -r "brave-browser" -t 0
 wmctrl -x -r "spotify" -t 5
+wmctrl -x -r "spotify" -b add,fullscreen
 
 sleep 15
 wmctrl -x -r "webstorm" -t 10
