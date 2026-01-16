@@ -19,7 +19,6 @@ https://www.cyberciti.biz/faq/linux-unix-running-sudo-command-without-a-password
 https://www.synology.com/en-global/support/download/DS220j?version=7.2#utilities
 
 *** enable shuffle za eog
-sudo apt-get install eog-plugins -y
 in potem nastavitev v eog
 
 then start eye of gnome, (terminal or not, doesn't matter for now), click
