@@ -10,7 +10,7 @@ webstorm &
 
 
 # move apps
-sleep 3
+sleep 5
 wmctrl -x -r "brave-browser" -t 0
 wmctrl -x -r "spotify" -t 5
 wmctrl -x -r "spotify" -b add,fullscreen

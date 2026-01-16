@@ -40,3 +40,8 @@ https://orgmode.org/manual/Activation.html#Activation
 
 * conf nautilus
   https://askubuntu.com/questions/294901/how-to-disable-recent-files-folder-in-nautilus
+
+# Clementine
+take latest version from https://github.com/clementine-player/Clementine/releases
+you need to match the name by ubuntu name (24.04 noble)
+and install it with apt
