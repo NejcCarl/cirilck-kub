@@ -4,6 +4,7 @@
 # Workspace numbering: 0 = first workspace
 
 # Launch apps
+firefox
 brave-browser &
 spotify &
 webstorm &
