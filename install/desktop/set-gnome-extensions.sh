@@ -61,10 +61,11 @@ gsettings set org.gnome.shell.extensions.tactile gap-size 32
 gsettings set org.gnome.shell.extensions.just-perfection animation 2
 gsettings set org.gnome.shell.extensions.just-perfection dash-app-running true
 gsettings set org.gnome.shell.extensions.just-perfection workspace-popup false
-# todo now should I remove this?
-#gsettings set org.gnome.shell.extensions.just-perfection workspace false
-#gsettings set org.gnome.shell.extensions.just-perfection workspace-switcher-should-show false
 gsettings set org.gnome.shell.extensions.just-perfection activities-button false
+gsettings set org.gnome.shell.extensions.just-perfection accessibility-menu false
+# Value 0 = desktop, 1 = overview.
+gsettings set org.gnome.shell.extensions.just-perfection startup-status 0
+gsettings set org.gnome.shell.extensions.just-perfection window-maximized-on-create true
 
 # Configure Blur My Shell
 gsettings set org.gnome.shell.extensions.blur-my-shell.appfolder blur false

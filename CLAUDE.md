@@ -49,7 +49,7 @@ for installer in ~/.local/share/cirilck-kub/install/terminal/*.sh; do source $in
 - GNOME (desktop environment)
 - VS Code (via gnome.sh and vscode.sh scripts)
 
-**Web Apps as Desktop Entries**: The applications/ directory contains scripts that generate .desktop files for web-based tools (HEY, Basecamp, WhatsApp, etc.), integrating them into the GNOME launcher.
+**Web Apps as Desktop Entries**: The applications/ directory contains scripts that generate .desktop files for web-based tools (WhatsApp, etc.), integrating them into the GNOME launcher.
 
 ### Post-Install Management
 
