@@ -1,0 +1,23 @@
+#!/bin/bash
+
+# Synology NAS Unmount Script
+MOUNT_POINT="$HOME/NAS"
+
+RED='\033[0;31m'
+GREEN='\033[0;32m'
+NC='\033[0m'
+
+if ! mountpoint -q "$MOUNT_POINT"; then
+    echo -e "${RED}NAS is not mounted at $MOUNT_POINT${NC}"
+    exit 1
+fi
+
+echo "Unmounting NAS from $MOUNT_POINT..."
+sudo umount "$MOUNT_POINT"
+
+if [ $? -eq 0 ]; then
+    echo -e "${GREEN}NAS unmounted successfully${NC}"
+else
+    echo -e "${RED}Failed to unmount. Make sure no files are open from the NAS.${NC}"
+    exit 1
+fi

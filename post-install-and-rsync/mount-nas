@@ -1,0 +1,44 @@
+#!/bin/bash
+
+# Synology NAS Mount Script
+# Configure these variables for your setup
+NAS_ADDRESS="192.168.0.132"  # Your Synology IP or hostname
+NAS_SHARE="NetBackup"             # Share name on the NAS
+NAS_USER="nejc"     # Your NAS username
+MOUNT_POINT="$HOME/NAS"      # Where to mount locally
+
+# Colors for output
+RED='\033[0;31m'
+GREEN='\033[0;32m'
+NC='\033[0m' # No Color
+
+# Check if cifs-utils is installed
+if ! command -v mount.cifs &> /dev/null; then
+    echo "Installing cifs-utils..."
+    sudo apt update && sudo apt install -y cifs-utils
+fi
+
+# Create mount point if it doesn't exist
+if [ ! -d "$MOUNT_POINT" ]; then
+    mkdir -p "$MOUNT_POINT"
+    echo -e "${GREEN}Created mount point: $MOUNT_POINT${NC}"
+fi
+
+# Check if already mounted
+if mountpoint -q "$MOUNT_POINT"; then
+    echo -e "${GREEN}NAS is already mounted at $MOUNT_POINT${NC}"
+    exit 0
+fi
+
+# Mount the NAS share
+echo "Mounting //${NAS_ADDRESS}/${NAS_SHARE} to ${MOUNT_POINT}..."
+sudo mount -t cifs "//${NAS_ADDRESS}/${NAS_SHARE}" "$MOUNT_POINT" \
+    -o username="$NAS_USER",uid=$(id -u),gid=$(id -g),iocharset=utf8
+
+if [ $? -eq 0 ]; then
+    echo -e "${GREEN}NAS mounted successfully at $MOUNT_POINT${NC}"
+    echo "Open Nautilus and navigate to $MOUNT_POINT"
+else
+    echo -e "${RED}Failed to mount NAS. Check your credentials and network connection.${NC}"
+    exit 1
+fi
