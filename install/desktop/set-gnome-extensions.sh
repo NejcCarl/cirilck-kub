@@ -39,6 +39,9 @@ gext install wsmatrix@martin.zurowietz.de
 # Invert Window Color: Invert colors of individual windows with a keyboard shortcut
 gext install invert-window@maiself
 
+# Emoji Copy: Emoji picker with search and clipboard integration
+gext install emoji-copy@felipeftn
+
 # Compile gsettings schemas in order to be able to set them
 sudo cp ~/.local/share/gnome-shell/extensions/tactile@lundal.io/schemas/org.gnome.shell.extensions.tactile.gschema.xml /usr/share/glib-2.0/schemas/
 sudo cp ~/.local/share/gnome-shell/extensions/just-perfection-desktop\@just-perfection/schemas/org.gnome.shell.extensions.just-perfection.gschema.xml /usr/share/glib-2.0/schemas/
