@@ -55,3 +55,14 @@ cp /usr/share/applications/org.clementine_player.Clementine.desktop ~/.local/sha
 sed -i '/^Actions=/a StartupWMClass=clementine' ~/.local/share/applications/org.clementine_player.Clementine.desktop
 update-desktop-database ~/.local/share/applications/
 ```
+
+## Enable tray icon in top bar
+Close Clementine first, then run:
+```bash
+gnome-extensions enable ubuntu-appindicators@ubuntu.com
+cat >> ~/.config/Clementine/Clementine.conf << 'EOF'
+
+[Behaviour]
+showtrayicon=true
+EOF
+```

@@ -98,3 +98,6 @@ gsettings set org.gnome.shell.extensions.alphabetical-app-grid folder-order-posi
 # Configure Workspace Matrix
 gsettings set org.gnome.shell.extensions.wsmatrix-settings num-columns 6
 gsettings set org.gnome.shell.extensions.wsmatrix-settings num-rows 5
+
+# configure top bar to have icons (e.g. Clementine)
+gnome-extensions enable ubuntu-appindicators@ubuntu.com
