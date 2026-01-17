@@ -11,7 +11,7 @@ google-chrome &
 opera &
 spotify &
 webstorm &
-
+clementine &
 
 # move apps
 sleep 5

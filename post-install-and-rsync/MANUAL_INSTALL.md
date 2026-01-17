@@ -9,10 +9,6 @@ tole mors dat na dno
 nejc ALL=(ALL) NOPASSWD:ALL
 https://www.cyberciti.biz/faq/linux-unix-running-sudo-command-without-a-password/
 
-** install mega
-
-** terminal set columns, rows and font
-
 *** install git
 **** copy .ssh keys
 **** chmod 600 id_rsa
@@ -44,7 +40,7 @@ https://orgmode.org/manual/Activation.html#Activation
 * conf nautilus
   https://askubuntu.com/questions/294901/how-to-disable-recent-files-folder-in-nautilus
 
-# Clementine
+# Clementine - script is in the scripts folder
 take latest version from https://github.com/clementine-player/Clementine/releases
 you need to match the name by ubuntu name (24.04 noble)
 and install it with apt
