@@ -3,9 +3,11 @@
 # Synology NAS Mount Script
 # Configure these variables for your setup
 NAS_ADDRESS="192.168.0.132"  # Your Synology IP or hostname
-NAS_SHARE="NetBackup"             # Share name on the NAS
-NAS_USER="nejc"     # Your NAS username
-MOUNT_POINT="$HOME/NAS"      # Where to mount locally
+NAS_USER="nejc"              # Your NAS username
+MOUNT_BASE="$HOME/NAS"       # Base directory for mounts
+
+# Define shares to mount (share_name:mount_subfolder)
+NAS_SHARES=("NetBackup:NetBackup" "nejcSync:nejcSync")
 
 # Colors for output
 RED='\033[0;31m'
@@ -18,27 +20,34 @@ if ! command -v mount.cifs &> /dev/null; then
     sudo apt update && sudo apt install -y cifs-utils
 fi
 
-# Create mount point if it doesn't exist
-if [ ! -d "$MOUNT_POINT" ]; then
-    mkdir -p "$MOUNT_POINT"
-    echo -e "${GREEN}Created mount point: $MOUNT_POINT${NC}"
-fi
+# Mount each share
+for share_entry in "${NAS_SHARES[@]}"; do
+    NAS_SHARE="${share_entry%%:*}"
+    MOUNT_SUBFOLDER="${share_entry##*:}"
+    MOUNT_POINT="${MOUNT_BASE}/${MOUNT_SUBFOLDER}"
 
-# Check if already mounted
-if mountpoint -q "$MOUNT_POINT"; then
-    echo -e "${GREEN}NAS is already mounted at $MOUNT_POINT${NC}"
-    exit 0
-fi
+    # Create mount point if it doesn't exist
+    if [ ! -d "$MOUNT_POINT" ]; then
+        mkdir -p "$MOUNT_POINT"
+        echo -e "${GREEN}Created mount point: $MOUNT_POINT${NC}"
+    fi
 
-# Mount the NAS share
-echo "Mounting //${NAS_ADDRESS}/${NAS_SHARE} to ${MOUNT_POINT}..."
-sudo mount -t cifs "//${NAS_ADDRESS}/${NAS_SHARE}" "$MOUNT_POINT" \
-    -o username="$NAS_USER",uid=$(id -u),gid=$(id -g),iocharset=utf8
+    # Check if already mounted
+    if mountpoint -q "$MOUNT_POINT"; then
+        echo -e "${GREEN}${NAS_SHARE} is already mounted at $MOUNT_POINT${NC}"
+        continue
+    fi
 
-if [ $? -eq 0 ]; then
-    echo -e "${GREEN}NAS mounted successfully at $MOUNT_POINT${NC}"
-    echo "Open Nautilus and navigate to $MOUNT_POINT"
-else
-    echo -e "${RED}Failed to mount NAS. Check your credentials and network connection.${NC}"
-    exit 1
-fi
+    # Mount the NAS share
+    echo "Mounting //${NAS_ADDRESS}/${NAS_SHARE} to ${MOUNT_POINT}..."
+    sudo mount -t cifs "//${NAS_ADDRESS}/${NAS_SHARE}" "$MOUNT_POINT" \
+        -o username="$NAS_USER",uid=$(id -u),gid=$(id -g),iocharset=utf8
+
+    if [ $? -eq 0 ]; then
+        echo -e "${GREEN}${NAS_SHARE} mounted successfully at $MOUNT_POINT${NC}"
+    else
+        echo -e "${RED}Failed to mount ${NAS_SHARE}. Check your credentials and network connection.${NC}"
+    fi
+done
+
+echo "Open Nautilus and navigate to $MOUNT_BASE"
