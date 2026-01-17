@@ -45,20 +45,6 @@ take latest version from https://github.com/clementine-player/Clementine/release
 you need to match the name by ubuntu name (24.04 noble)
 and install it with apt
 
-## Fix gear icon in dock (missing StartupWMClass)
-```bash
-cp /usr/share/applications/org.clementine_player.Clementine.desktop ~/.local/share/applications/
-sed -i '/^Actions=/a StartupWMClass=clementine' ~/.local/share/applications/org.clementine_player.Clementine.desktop
-update-desktop-database ~/.local/share/applications/
-```
-
-## Enable tray icon in top bar
-Close Clementine first, then run:
-```bash
-gnome-extensions enable ubuntu-appindicators@ubuntu.com
-cat >> ~/.config/Clementine/Clementine.conf << 'EOF'
-
-[Behaviour]
-showtrayicon=true
-EOF
-```
+# Maybe useful
+** control sound bluetooth
+sudo apt install pavucontrol

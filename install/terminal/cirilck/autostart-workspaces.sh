@@ -4,7 +4,7 @@
 # Creates a .desktop file to launch apps on specific workspaces at login
 
 OMAKUB_DIR="$HOME/.local/share/cirilck-kub"
-SCRIPT_SRC="$OMAKUB_DIR/scripts/autostart-workspaces.sh"
+SCRIPT_SRC="$OMAKUB_DIR/startup/autostart-workspaces.sh"
 DESKTOP_FILE="$HOME/.config/autostart/autostart-workspaces.desktop"
 
 echo "Setting up autostart workspaces..."
