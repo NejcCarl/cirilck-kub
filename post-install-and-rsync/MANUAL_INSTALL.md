@@ -1,6 +1,7 @@
 ** restore home
 ** restore music
-rsync -av --delete nejc@192.168.0.132::nejcSync/Music/ /home/nejc/Music
+# bwlimit is here to not overwhelm my in memory cache and freeze Ubuntu
+rsync -av --delete --bwlimit=10000 nejc@192.168.0.132::nejcSync/Music/ /home/nejc/Music
 
 ** sudo without passwd
 sudo visudo
@@ -47,3 +48,10 @@ https://orgmode.org/manual/Activation.html#Activation
 take latest version from https://github.com/clementine-player/Clementine/releases
 you need to match the name by ubuntu name (24.04 noble)
 and install it with apt
+
+## Fix gear icon in dock (missing StartupWMClass)
+```bash
+cp /usr/share/applications/org.clementine_player.Clementine.desktop ~/.local/share/applications/
+sed -i '/^Actions=/a StartupWMClass=clementine' ~/.local/share/applications/org.clementine_player.Clementine.desktop
+update-desktop-database ~/.local/share/applications/
+```
