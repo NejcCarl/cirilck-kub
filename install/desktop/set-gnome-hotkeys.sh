@@ -112,3 +112,8 @@ gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/or
 gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom8/ command 'nautilus'
 gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom8/ binding '<Ctrl><Alt>h'
 
+# Swap Caps Lock and Escape keys
+  gsettings set org.gnome.desktop.input-sources xkb-options "['caps:swapescape']"
+
+#  To revert back to normal:
+#  gsettings set org.gnome.desktop.input-sources xkb-options "[]"
