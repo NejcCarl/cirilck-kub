@@ -1,6 +1,6 @@
 ** restore home
 ** restore music
-rsync -av --delete nejc@192.168.64.132::nejcSync/Music/ /home/nejc/Music
+rsync -av --delete nejc@192.168.0.132::nejcSync/Music/ /home/nejc/Music
 
 ** sudo without passwd
 sudo visudo
