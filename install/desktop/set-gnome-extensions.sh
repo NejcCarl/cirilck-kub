@@ -48,6 +48,9 @@ sudo cp ~/.local/share/gnome-shell/extensions/AlphabeticalAppGrid\@stuarthayhurs
 sudo cp ~/.local/share/gnome-shell/extensions/wsmatrix\@martin.zurowietz.de/schemas/org.gnome.shell.extensions.wsmatrix.gschema.xml /usr/share/glib-2.0/schemas/
 sudo glib-compile-schemas /usr/share/glib-2.0/schemas/
 
+# Don't show recent files in nautilus
+gsettings set org.gnome.desktop.privacy remember-recent-files false
+
 # Configure Tactile
 gsettings set org.gnome.shell.extensions.tactile col-0 1
 gsettings set org.gnome.shell.extensions.tactile col-1 2
