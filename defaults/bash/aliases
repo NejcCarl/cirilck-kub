@@ -15,6 +15,7 @@ alias ....='cd ../../..'
 # Tools
 alias bat='batcat'
 alias top='htop'
+alias c='t && claude'
 
 # Git
 alias gcm='git commit -m'
@@ -51,7 +52,3 @@ alias hrana='nautilus /home/nejc/h/Mega/navodila/hrana'
 # eog
 alias wi="(eog -s /home/nejc/Pictures/slike/novo&); exit"
 alias na="(eog -s /home/nejc/Pictures/nature&); exit"
-
-# todo now invert colors
-#sleep 0.10
-#xdotool key "Super_L+i"

@@ -21,10 +21,10 @@ wmctrl -x -r "spotify" -b add,fullscreen
 
 sleep 15
 wmctrl -x -r "webstorm" -t 10
-wmctrl -x -r "chromium" -t 12
-wmctrl -x -r "brave-browser" -t 13
-wmctrl -x -r "opera" -t 18
+wmctrl -x -r "google-chrome" -t 19
+wmctrl -x -r "chromium" -t 24
+wmctrl -x -r "opera" -t 25
 
 sleep 15
-wmctrl -x -r "firefox" -t 19
+wmctrl -x -r "firefox" -t 18
 
