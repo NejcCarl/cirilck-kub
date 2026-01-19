@@ -9,7 +9,7 @@ source /usr/share/bash-completion/bash_completion
 
 # Set complete path
 export PATH="./bin:$HOME/.local/bin:$HOME/.local/share/cirilck-kub/bin:$PATH"
-export PATH="$PATH:$HOME/h/delo/1programiranje/bashscripts/binTuje:$HOME/h/1programiranje/bashscripts/bin"
+export PATH="$PATH:$HOME/h/1programiranje/bashscripts/binTuje:$HOME/h/1programiranje/bashscripts/bin"
 export PATH="$PATH:$HOME/h/1programiranje/bashscripts/lbrt_linux:/home/nejc/.local/bin"
 export PATH="$PATH:/usr/local/bin:/usr/bin:/snap/bin:/sbin"
 export PATH="$PATH:$HOME/.dotnet/tools"
