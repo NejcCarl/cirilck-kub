@@ -15,7 +15,7 @@ alias ....='cd ../../..'
 # Tools
 alias bat='batcat'
 alias top='htop'
-alias c='t && claude'
+alias a='t && claude'
 
 # Git
 alias gcm='git commit -m'
