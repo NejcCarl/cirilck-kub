@@ -11,3 +11,6 @@ gsettings set org.gnome.desktop.calendar show-weekdate true
 
 # Turn off ambient sensors for setting screen brightness (they rarely work well!)
 gsettings set org.gnome.settings-daemon.plugins.power ambient-enabled false
+
+# Set mouse speed
+gsettings set org.gnome.desktop.peripherals.mouse speed 0.81012658227848111
