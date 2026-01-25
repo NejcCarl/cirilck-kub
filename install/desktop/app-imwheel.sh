@@ -11,8 +11,8 @@ None,      Up,   Button4, 3
 None,      Down, Button5, 3
 EOF
 
-# Start imwheel
-imwheel --kill
+# Start imwheel (only grab scroll buttons 4 and 5, leave others alone)
+imwheel --kill -b "45"
 
 # Add imwheel to autostart
 mkdir -p ~/.config/autostart
@@ -20,7 +20,7 @@ cat > ~/.config/autostart/imwheel.desktop << 'EOF'
 [Desktop Entry]
 Type=Application
 Name=IMWheel
-Exec=imwheel
+Exec=imwheel -b "45"
 Hidden=false
 NoDisplay=true
 X-GNOME-Autostart-enabled=true
