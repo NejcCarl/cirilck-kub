@@ -16,6 +16,7 @@ alias ....='cd ../../..'
 alias bat='batcat'
 alias top='htop'
 alias a='t && claude'
+alias aa='tt && claude'
 alias python='python3'
 
 # Git
