@@ -17,7 +17,7 @@ clementine &
 # move apps
 sleep 10
 wmctrl -x -r "brave-browser" -t 0
-wmctrl -x -r "spotify" -t 5
+wmctrl -x -r "spotify" -t 1
 wmctrl -x -r "spotify" -b add,fullscreen
 
 sleep 15
