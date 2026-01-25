@@ -59,21 +59,21 @@ gsettings set org.gnome.shell.extensions.dash-to-dock hot-keys false
 # Home folder shortcut
 gsettings set org.gnome.settings-daemon.plugins.media-keys home "['<Ctrl>h']"
 
-# Increase/decrease text size
-gsettings set org.gnome.settings-daemon.plugins.media-keys increase-text-size "['<Shift><Ctrl><Alt>KP_Add']"
-gsettings set org.gnome.settings-daemon.plugins.media-keys decrease-text-size "['<Shift><Ctrl><Alt>KP_Subtract']"
+# Increase/decrease text size (numpad + non-numpad alternatives)
+gsettings set org.gnome.settings-daemon.plugins.media-keys increase-text-size "['<Shift><Ctrl><Alt>KP_Add', '<Ctrl><Alt>equal']"
+gsettings set org.gnome.settings-daemon.plugins.media-keys decrease-text-size "['<Shift><Ctrl><Alt>KP_Subtract', '<Ctrl><Alt>minus']"
 
-# Open settings
-gsettings set org.gnome.settings-daemon.plugins.media-keys control-center "['<Ctrl><Alt>KP_Multiply']"
+# Open settings (numpad + non-numpad alternatives)
+gsettings set org.gnome.settings-daemon.plugins.media-keys control-center "['<Ctrl><Alt>KP_Multiply', '<Ctrl><Alt>s']"
 
 # Media playback controls
 gsettings set org.gnome.settings-daemon.plugins.media-keys previous "['<Ctrl><Alt>n']"
 gsettings set org.gnome.settings-daemon.plugins.media-keys play "['<Ctrl><Alt>m']"
 gsettings set org.gnome.settings-daemon.plugins.media-keys next "['<Shift>AudioPlay', '<Ctrl><Alt>comma']"
 
-# Volume controls
+# Volume controls (numpad + non-numpad alternatives)
 gsettings set org.gnome.settings-daemon.plugins.media-keys volume-up "['<Ctrl><Alt>KP_8']"
-gsettings set org.gnome.settings-daemon.plugins.media-keys volume-mute "['<Ctrl><Alt>KP_5']"
+gsettings set org.gnome.settings-daemon.plugins.media-keys volume-mute "['<Ctrl><Alt>KP_5', '<Ctrl><Alt>0']"
 gsettings set org.gnome.settings-daemon.plugins.media-keys volume-down "['<Ctrl><Alt>KP_2']"
 gsettings set org.gnome.settings-daemon.plugins.media-keys volume-step 5
 
@@ -81,8 +81,8 @@ gsettings set org.gnome.settings-daemon.plugins.media-keys volume-step 5
 gsettings set org.gnome.settings-daemon.plugins.media-keys custom-keybindings "['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom3/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom4/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom5/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom6/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom7/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom8/']"
 
 # Set ulauncher to Super+Space
-# switch input source changed to not conflict with ulauncher
-gsettings set org.gnome.desktop.wm.keybindings switch-input-source "['<Ctrl><Alt>KP_9']"
+# switch input source changed to not conflict with ulauncher (numpad + non-numpad alternatives)
+gsettings set org.gnome.desktop.wm.keybindings switch-input-source "['<Ctrl><Alt>KP_9', '<Ctrl><Alt>g']"
 gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/ name 'Ulauncher'
 gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/ command 'sh -c "pgrep -x ulauncher && { ulauncher-toggle || true; } || setsid -f ulauncher"'
 gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/ binding '<Super>space'
